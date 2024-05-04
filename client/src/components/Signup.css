@@ -1,0 +1,80 @@
+/* CSS for Signup Component */
+
+/* Main container */
+.mainsignup{
+  background-image: url('../../imagesFolder/loginPagebk.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center the login container */
+  align-items: center;
+}
+.signup-container {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(249, 249, 249, 0.5);
+  }
+  
+  /* Input fields */
+  .input-field {
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #002f34;
+    font-weight: bold;
+  }
+  
+  .input-field input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Button */
+  .signup-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(10, 83, 103);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    background-color: rgba(180, 227, 240, 0.7);
+  }
+  
+  /* Link */
+  .signup-link {
+    display: block;
+    margin-top: 10px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(10, 83, 103);
+    text-align: center;
+    text-decoration: white;
+  }
+  
+  .signup-link:hover {
+    background-color: rgba(180, 227, 240, 0.7);
+  }
+  
+  /* CSS for centering and styling h3 element */
+
+h3 {
+    text-align: center; /* Center align the text */
+    text-decoration: none;
+    font-size: 24px;
+    color: #002f34;
+    font-weight: bold;
+  }

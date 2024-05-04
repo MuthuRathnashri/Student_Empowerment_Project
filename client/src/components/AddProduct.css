@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.form-back{
+  background-image: url('../../imagesFolder/shop.jpg');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+  outline: none;
+  min-height: 100vh;
+  padding: 30px;
+
+}
+.form-container {
+    margin: 0px auto;
+    max-width: 700px;
+    padding: 50px;
+    border: 7px solid #118895;
+    border-radius: 70px;
+    background-color: #fff;
+  }
+  
+  .form-back h2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Playfair Display',sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #002f34;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display',sans-serif;
+    font-weight: bold;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #002f34;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .select-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Playfair Display',sans-serif;
+    cursor: pointer;
+    background-color: #002f34;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #118895;
+  }
+  

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.myProduct-container {
+    background-image: url('../../imagesFolder/shop1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat;
+    min-height: 100vh;
+    outline: none;
+}
+
+.myProduct-text {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.card m-3 {
+    position: relative; /* Ensure relative positioning for absolute positioning of buttons */
+}
+
+.left-btn {
+    position: absolute;
+    border-radius: 40px;
+    padding :3px;
+    width: 90px;
+    font-family: 'Playfair Display',sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #002f34;
+    background-color: rgb(152, 216, 152);
+    border: 0px;
+    left: 10px; /* Adjust left position as needed */
+    bottom: 10px; /* Adjust bottom position as needed */
+}
+
+.right-btn {
+    position: absolute;
+    border-radius: 40px;
+    font-family: 'Playfair Display',sans-serif;
+    font-weight: bold;
+    width: 105px;
+    font-size: 17px;
+    border: 0px;
+    color: #002f34;
+    background-color: rgb(228, 136, 136);
+    padding: 3px;
+    right: 10px; 
+    bottom: 10px; 
+    
+}
+.icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: #ddd;
+    cursor: pointer;
+}
+.red-icons{
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: red;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: grey;
+}

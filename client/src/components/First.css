@@ -1,0 +1,10 @@
+.Firstpage{
+    background-image: url('../../imagesFolder/loginPagebk.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontally center the login container */
+    align-items: center; 
+}

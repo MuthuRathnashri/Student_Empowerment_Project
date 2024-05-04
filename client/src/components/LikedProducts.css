@@ -1,0 +1,13 @@
+.Like-container{
+    background-image: url('../../imagesFolder/shop1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat;
+    min-height: 100vh;
+    outline: none;
+}
+.Like-text{
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
