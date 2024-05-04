@@ -16,7 +16,7 @@ const Blog = () => {
   const [showSearchBar, setShowSearchBar] = useState(true); // New state to control search bar display
 
   useEffect(() => {
-    axios.get('http://localhost:4000/test/getData')
+    axios.get('https://student-empowerment-project.onrender.com/test/getData')
       .then(response => {
         setTestimonials(response.data);
         setFilteredTestimonials(response.data);

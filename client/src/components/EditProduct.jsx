@@ -26,7 +26,7 @@ function EditProduct() {
 
 
     useEffect (() => {
-        const url = 'http://localhost:4000/get-product/' + p.productId;
+        const url = 'https://student-empowerment-project.onrender.com/get-product/' + p.productId;
         axios.get(url)
         .then((res) => {
             if(res.data.product){
@@ -63,7 +63,7 @@ function EditProduct() {
         }
         formData.append('userId',localStorage.getItem('userId'));
 
-        const url = 'http://localhost:4000/edit-product';
+        const url = 'https://student-empowerment-project.onrender.com/edit-product';
         axios.post(url, formData)
             .then((res) => {
                 if (res.data.message) {
@@ -164,7 +164,7 @@ function EditProduct() {
                             type="file"
                             onChange={(e) => { setpimage(e.target.files[0]) }}
                         />
-                        <img src={'http://localhost:4000/' + poldimage} width={100} height={50}/>
+                        <img src={'https://student-empowerment-project.onrender.com/' + poldimage} width={100} height={50}/>
                     </div>
 
                     <div className="form-group">
@@ -175,7 +175,7 @@ function EditProduct() {
                             type="file"
                             onChange={(e) => { setpimage2(e.target.files[0]) }}
                         />
-                        {pimage2 && <img src={'http://localhost:4000/' + poldimage2} width={100} height={50}/>}
+                        {pimage2 && <img src={'https://student-empowerment-project.onrender.com/' + poldimage2} width={100} height={50}/>}
                     </div>
 
                     <button onClick={handleApi} className="btn btn-primary mt-3"> SUBMIT </button>

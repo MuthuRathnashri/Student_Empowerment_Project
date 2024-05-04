@@ -28,7 +28,7 @@ const HelpDesk = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:4000/helping/helper', helping) // Send the whole helping object
+    axios.post('https://student-empowerment-project.onrender.com/helping/helper', helping) // Send the whole helping object
       .then((res) => {
         alert("Mentor added successfully!");
         setShowForm(false);

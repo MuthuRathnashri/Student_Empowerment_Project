@@ -24,7 +24,7 @@ function LikedProducts(){
 
 
     useEffect (() => {
-        const url = 'http://localhost:4000/liked-products';
+        const url = 'https://student-empowerment-project.onrender.com/liked-products';
         let data = { userId : localStorage.getItem('userId') }
         console.log(data);
         axios.post(url,data)
@@ -59,7 +59,7 @@ const handleClick=()=>{
 const handleLike = (productId) => {
     let userId = localStorage.getItem('userId');
 
-    const url = 'http://localhost:4000/like-product';
+    const url = 'https://student-empowerment-project.onrender.com/like-product';
     const data = { userId,productId}
         axios.post(url,data)
         .then((res) => {
@@ -109,14 +109,14 @@ const handleProduct = (id) => {
                 <p className="m-2 text-success"> { item.pdesc }</p> within return */
         return (
             // <div key={item._id} className="card m-3">
-            //     <img width = "300px" height = "200px" src={ 'http://localhost:4000/' + item.pimage }/>
+            //     <img width = "300px" height = "200px" src={ 'https://student-empowerment-project.onrender.com/' + item.pimage }/>
             //     <p className="m-2"> { item.pname } | { item.category }</p>
             // </div>
             <div onClick = { () => handleProduct(item._id) } key={item._id} className="card m-3">
                 <div onClick={ () => handleLike(item._id) } className="icon-con">
                     <FaHeart className="icons" />
                 </div>  
-                <img width = "300px" height = "200px" src={ 'http://localhost:4000/' + item.pimage }/>
+                <img width = "300px" height = "200px" src={ 'https://student-empowerment-project.onrender.com/' + item.pimage }/>
                 <p className="m-2"> { item.pname } | { item.category }</p>                   
             </div>
         )
@@ -137,7 +137,7 @@ const handleProduct = (id) => {
                                 <div onClick={ () => handleLike(item._id) } className="icon-con">
                                     <FaHeart className="red-icons" />
                                 </div>    
-                                <img width = "300px" height = "200px" src={ 'http://localhost:4000/' + item.pimage }/>
+                                <img width = "300px" height = "200px" src={ 'https://student-empowerment-project.onrender.com/' + item.pimage }/>
                                 <p className="m-2"> { item.pname } | { item.category }</p>
                                
                             </div>

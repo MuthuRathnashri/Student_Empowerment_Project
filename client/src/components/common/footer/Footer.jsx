@@ -11,7 +11,7 @@ const Footer = () => {
   const handlesign = (e) => {
     e.preventDefault();
     let copysign = {...sign};
-    axios.post('http://localhost:4000/sign/news', copysign)
+    axios.post('https://student-empowerment-project.onrender.com/sign/news', copysign)
       .then((res) => {
         alert("Done");
       })

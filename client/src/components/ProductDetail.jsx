@@ -16,7 +16,7 @@ function ProductDetail() {
     const { productId } = useParams();
 
     useEffect (() => {
-        const url = 'http://localhost:4000/get-product/' + productId;
+        const url = 'https://student-empowerment-project.onrender.com/get-product/' + productId;
         axios.get(url)
             .then((res) => {
                 if(res.data.product){
@@ -45,7 +45,7 @@ function ProductDetail() {
         e.preventDefault();
         const { name, contact, message } = formData;
 
-        axios.post('http://localhost:4000/send-message', { name, contact, message, productId })
+        axios.post('https://student-empowerment-project.onrender.com/send-message', { name, contact, message, productId })
             .then(response => {
                 console.log(response.data);
                 alert('Message sent successfully');
@@ -63,8 +63,8 @@ function ProductDetail() {
                 <h6>Product Details</h6><br /><br />
                 {product && (
                     <>
-                        <img className='product-detail-image' src={'http://localhost:4000/' + product.pimage} alt='' />
-                        {product.pimage2 && <img className='product-detail-image' src={'http://localhost:4000/' + product.pimage2} alt='' />}
+                        <img className='product-detail-image' src={'https://student-empowerment-project.onrender.com/' + product.pimage} alt='' />
+                        {product.pimage2 && <img className='product-detail-image' src={'https://student-empowerment-project.onrender.com/' + product.pimage2} alt='' />}
                         <div className='product-info-container'>
                             <p className='product-name'>{product.pname} | {product.category}</p>
                             <h3 className='product-price'>{product.price}</h3>

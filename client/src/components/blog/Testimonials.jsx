@@ -14,7 +14,7 @@ const Testimonials = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let copyTest = {...test};
-    axios.post('http://localhost:4000/test/testimonials', copyTest)
+    axios.post('https://student-empowerment-project.onrender.com/test/testimonials', copyTest)
       .then((res) => {
         alert("Done");
       })

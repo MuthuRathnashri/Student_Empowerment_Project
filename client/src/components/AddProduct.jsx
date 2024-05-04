@@ -33,7 +33,7 @@ function AddProduct() {
         }
         formData.append('userId',localStorage.getItem('userId'));
 
-        const url = 'http://localhost:4000/add-product';
+        const url = 'https://student-empowerment-project.onrender.com/add-product';
         axios.post(url, formData)
             .then((res) => {
                 if (res.data.message) {
