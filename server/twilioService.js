@@ -2,7 +2,7 @@ const twilio = require('twilio');
 const Product = require('./Product');
 
 const accountSid = "AC10b5785cecac0bd43c5262f9c351f4f3";
-const authToken = "4f081585cff4d9d4ef02acfb095bd855";
+const authToken = "f460ead30aa29ed3e30006b6ffc92293";
 const twilioClient = twilio(accountSid, authToken);
 
 async function sendMessage(req, res) {
