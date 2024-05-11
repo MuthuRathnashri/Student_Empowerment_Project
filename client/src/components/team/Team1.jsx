@@ -7,7 +7,7 @@ import "./team.css";
 import Awrapper from "../about/Awrapper";
 import "../about/about.css";
 import axios from 'axios';
-import Header from "../Header1";
+import Header from '../common/header/Header';
 
 const Team = () => {
   const [universityMentors, setUniversityMentors] = useState([]);

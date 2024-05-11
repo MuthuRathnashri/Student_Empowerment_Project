@@ -3,7 +3,7 @@ import Back from "../common/back/Back";
 import axios from 'axios';
 import "./price.css";
 import Faq from "./Faq";
-import Header from "../Header1";
+import Header from '../common/header/Header';
 
 const Pricing = () => {
   const [universityMentors, setUniversityMentors] = useState([]);
