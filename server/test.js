@@ -20,6 +20,7 @@
 
 //     await conn.insertOne(objPatient);
 
+
 // })
 
 // router.get('/getData', async function(req, res){

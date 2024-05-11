@@ -122,6 +122,7 @@ import { useState } from "react";
 import Header from "./Header1";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import first from './First';
 import './Login.css';
 
 function Login() {
@@ -140,7 +141,7 @@ function Login() {
                     if (res.data.token) {
                         localStorage.setItem('token', res.data.token);
                         localStorage.setItem('userId', res.data.userId);
-                        navigate('/');
+                        navigate('/first');
                     } else {
                         setErrorMessage('Invalid user ID or password');
                     }

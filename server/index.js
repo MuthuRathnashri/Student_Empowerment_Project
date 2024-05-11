@@ -5,8 +5,8 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 const productController = require('./controllers/productController');
 const userController = require('./controllers/userController');
-const Product = require('./Product');
-const twilio = require('twilio');
+const twilioService = require('./twilioService');
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -31,6 +31,10 @@ const port = 4000
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://rathnashri2004:DYohGaoTJKaRGShn@cluster0.cwbjxv6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
+const test = require('./test');
+const helping = require('./helping');
+const sign = require('./sign');
+
 app.get('/', (req, res) => {
   res.send('hello...')
 })
@@ -47,50 +51,11 @@ app.get('/get-product/:pId' ,productController.getProductsById)
 app.post('/signup',userController.signup)
 app.get('/my-profile/:userId',userController.myProfileById)
 app.post('/login',userController.login)
+app.post('/send-message', twilioService.sendMessage);
 
-const accountSid = "AC10b5785cecac0bd43c5262f9c351f4f3";
-const authToken = "39f5a883758f372a96d76eff368ee664";
-const twilioClient = twilio(accountSid, authToken);
-
-// Route to send message using Twilio
-app.post('/send-message', async (req, res) => {
-  const { name, contact, message, productId } = req.body;
-
-  try {
-    // Fetch the product from the database
-    const product = await Product.findById(productId);
-
-    if (!product) {
-      return res.status(404).send('Product not found');
-    }
-
-    // Get the phone number from the product details
-    const phone = product.price;
-    const phoneNumber = '+91' + phone;
-
-    // Construct the message using form data
-    const composedMessage = `Name: ${name}\nContact: ${contact}\nMessage: ${message}`;
-
-    // Send message using Twilio
-    twilioClient.messages
-      .create({
-        body: composedMessage,
-        from: '+13203001602', // your Twilio phone number
-        to: phoneNumber
-      })
-      .then(message => {
-        console.log('Message sent successfully:', message.sid);
-        res.send('Message sent successfully');
-      })
-      .catch(error => {
-        console.error('Error sending message:', error);
-        res.status(500).send('Failed to send message');
-      });
-  } catch (error) {
-    console.error('Internal server error:', error);
-    res.status(500).send('Internal server error');
-  }
-});
+app.use('/test', test);
+app.use('/helping', helping);
+app.use('/sign', sign);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

@@ -17,7 +17,7 @@ const Team = () => {
   const fetchUniversityMentors = async () => {
     try {
       // Fetch mentor data from backend
-      const response = await axios.get('http://localhost:5000/helping/getData');
+      const response = await axios.get('https://student-empowerment-project.onrender.com/helping/getData');
       // Filter mentors with expertise "Stanford University"
       const universityMentors = response.data.filter(mentor => mentor.expertise === "Stanford University");
       setUniversityMentors(universityMentors);

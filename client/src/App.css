@@ -170,6 +170,14 @@ p {
   width: 60%;
   transition: 0.5s; */
 }
+
+.first-page-background {
+  background-image: url('../imagesFolder/loginPagebk.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
 .outline-btn:hover {
   background-color: #1eb2a6;
   color: #fff;

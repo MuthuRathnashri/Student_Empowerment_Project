@@ -43,7 +43,7 @@ function Signup() {
             <br></br>
             <div className="input-field">
             PASSWORD
-            <input type="text" value={password}
+            <input type="password" value={password}
             onChange={(e)=>{
                 setpassword(e.target.value)
             }}  />

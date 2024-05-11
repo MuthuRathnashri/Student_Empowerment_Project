@@ -1,10 +1,39 @@
-.Firstpage{
-    background-image: url('../../imagesFolder/loginPagebk.jpg'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
+.containerFirst {
+    max-width: 700px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(249, 249, 249, 0.5);
+  
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+  
     display: flex;
-    justify-content: center; /* Horizontally center the login container */
+    flex-direction: column;
     align-items: center; 
-}
+  }
+  
+  .containerFirst h1 { 
+    margin: 0 0 40px 10; 
+  }
+  
+  .containerFirst button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(10, 83, 103);
+    color: #fff;
+    cursor: pointer;
+    width: 180px;
+    justify-content: space-between;
+    margin: 0 10px; 
+    margin-top: 20px;
+  }
+  
+  .containerFirst button:hover {
+    background-color: rgba(180, 227, 240, 0.7);
+  }
+  

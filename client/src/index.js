@@ -49,6 +49,10 @@ import Home2 from './components/home/Home2';
 const router = createBrowserRouter([
   {
     path: "/",
+    element: (<Signup />),
+  },
+  {
+    path: "/first",
     element: (<First />),
   },
   {
